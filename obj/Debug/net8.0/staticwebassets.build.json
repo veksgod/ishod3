@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "mn0iYCQlb71iUCNzY1FKAaZCq5Bhj6MRkL6dyt8AiB4=",
+  "Source": "bolnica-webapi",
+  "BasePath": "_content/bolnica-webapi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

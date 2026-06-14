@@ -1,0 +1,6 @@
+@bolnica_webapi_HostAddress = http://localhost:5276
+
+GET {{bolnica_webapi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
