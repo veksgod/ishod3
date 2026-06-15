@@ -18,6 +18,12 @@ builder.Services.AddScoped<IOdjelServis, OdjelServis>();
 
 var app = builder.Build();
 
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    db.Database.Migrate();
+}
+
 // Swagger uvijek uključen
 app.UseSwagger();
 app.UseSwaggerUI();
