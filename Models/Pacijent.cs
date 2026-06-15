@@ -1,3 +1,5 @@
+using System.Text.Json.Serialization;
+
 namespace bolnica_webapi.Models;
 
 public class Pacijent
@@ -16,5 +18,6 @@ public class Pacijent
 
     public int? OdjelId { get; set; }
 
+    [JsonIgnore]
     public Odjel? Odjel { get; set; }
 }
