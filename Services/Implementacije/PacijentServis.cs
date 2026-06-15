@@ -1,6 +1,7 @@
 using bolnica_webapi.Data;
 using bolnica_webapi.Models;
 using bolnica_webapi.Services.Sucelja;
+using Microsoft.EntityFrameworkCore;
 
 namespace bolnica_webapi.Services.Implementacije;
 
@@ -20,7 +21,7 @@ public class PacijentServis : IPacijentServis
 
     public Pacijent? DohvatiPoId(int id)
     {
-        return _context.Pacijenti.FirstOrDefault(p => p.Id == id);
+        return _context.Pacijenti.AsNoTracking().FirstOrDefault(p => p.Id == id);
     }
 
     public List<Pacijent> PretraziPoImenu(string ime)

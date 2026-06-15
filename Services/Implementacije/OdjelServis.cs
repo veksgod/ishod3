@@ -24,6 +24,7 @@ public class OdjelServis : IOdjelServis
     public Odjel? DohvatiPoId(int id)
     {
         return _context.Odjeli
+            .AsNoTracking()
             .Include(o => o.Pacijenti)
             .FirstOrDefault(o => o.Id == id);
     }
