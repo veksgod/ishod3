@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("bolnica-webapi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+435301fc03326d5e79603ab249831a8b0d48f9ba")]
 [assembly: System.Reflection.AssemblyProductAttribute("bolnica-webapi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("bolnica-webapi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

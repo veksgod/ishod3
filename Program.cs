@@ -18,13 +18,12 @@ builder.Services.AddScoped<IOdjelServis, OdjelServis>();
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+// Swagger uvijek uključen
+app.UseSwagger();
+app.UseSwaggerUI();
 
-app.UseHttpsRedirection();
+// Za Docker može i bez HTTPS redirekcije
+// app.UseHttpsRedirection();
 
 app.MapControllers();
 

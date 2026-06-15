@@ -126,3 +126,4 @@ C:\Users\Gigabyte\.dotnet2\bolnica-webapi\obj\Debug\net8.0\refint\bolnica-webapi
 C:\Users\Gigabyte\.dotnet2\bolnica-webapi\obj\Debug\net8.0\bolnica-webapi.pdb
 C:\Users\Gigabyte\.dotnet2\bolnica-webapi\obj\Debug\net8.0\bolnica-webapi.genruntimeconfig.cache
 C:\Users\Gigabyte\.dotnet2\bolnica-webapi\obj\Debug\net8.0\ref\bolnica-webapi.dll
+C:\Users\Gigabyte\.dotnet2\bolnica-webapi\obj\Debug\net8.0\bolnica-webapi.sourcelink.json
