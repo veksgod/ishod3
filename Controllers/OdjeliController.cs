@@ -18,7 +18,8 @@ public class OdjeliController : ControllerBase
     [HttpGet]
     public ActionResult<List<Odjel>> Get()
     {
-        return _odjelServis.DohvatiSve();
+        var odjeli = _odjelServis.DohvatiSve();
+        return Ok(odjeli);
     }
 
     [HttpGet("{id}")]
@@ -29,7 +30,7 @@ public class OdjeliController : ControllerBase
         if (odjel == null)
             return NotFound();
 
-        return odjel;
+        return Ok(odjel);
     }
 
     [HttpPost]
@@ -37,24 +38,34 @@ public class OdjeliController : ControllerBase
     {
         _odjelServis.Dodaj(odjel);
 
-        return Ok();
+        return CreatedAtAction(nameof(Get), new { id = odjel.Id }, odjel);
     }
 
     [HttpPut("{id}")]
     public IActionResult Put(int id, Odjel odjel)
     {
+        var postojeci = _odjelServis.DohvatiPoId(id);
+
+        if (postojeci == null)
+            return NotFound();
+
         odjel.Id = id;
 
         _odjelServis.Azuriraj(odjel);
 
-        return Ok();
+        return NoContent();
     }
 
     [HttpDelete("{id}")]
     public IActionResult Delete(int id)
     {
+        var postojeci = _odjelServis.DohvatiPoId(id);
+
+        if (postojeci == null)
+            return NotFound();
+
         _odjelServis.Obrisi(id);
 
-        return Ok();
+        return NoContent();
     }
 }
